@@ -1,0 +1,30 @@
+<single-spa-router>
+  <redirect from="/" to="/example-spa/main"></redirect>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <h4>Header from shell layout html</h4>
+  <main>
+    <route path="/example-spa/main">
+      <application name="mf-main"></application>
+    </route>
+    <route path="/example-spa/login">
+      <application name="mf-login"></application>
+    </route>
+  </main>
+</single-spa-router>
