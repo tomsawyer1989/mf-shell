@@ -1,5 +1,4 @@
 <single-spa-router>
-  <redirect from="/" to="/example-spa/main"></redirect>
   <!--
 
     This is the single-spa Layout Definition for your microfrontends.
@@ -20,11 +19,15 @@
 
   <h4>Header from shell layout html</h4>
   <main>
+    <route path="/example-spa">
+      <application name="mf-ebs"></application>
+    </route>
     <route path="/example-spa/main">
       <application name="mf-main"></application>
     </route>
     <route path="/example-spa/login">
       <application name="mf-login"></application>
     </route>
+    <redirect from="/" to="/example-spa/main"></redirect>
   </main>
 </single-spa-router>
